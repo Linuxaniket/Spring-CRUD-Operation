@@ -19,17 +19,19 @@ A Full Stack Web Application built with **Spring Boot** for the backend and **Re
 
 ## 📁 Folder Structure
 
+```
 SpringProject/
-├── springBackend/ # Spring Boot backend application
-│ └── src/...
-│ └── pom.xml
+├── springBackend/        # Spring Boot backend application
+│   ├── src/...
+│   └── pom.xml
 │
-├── springfrontend/ # React frontend
-│ └── src/...
-│ └── package.json
+├── springfrontend/       # React frontend
+│   ├── src/...
+│   └── package.json
 │
 ├── .gitignore
 ├── README.md
+```
 
 ---
 
@@ -77,7 +79,7 @@ SpringProject/
 
 ## 📸 Screenshots
 
-| Dashboard   |             Image                                      |
+| Dashboard   | Image                                                       |
 | ----------- | ----------------------------------------------------------- |
 | [Dashboard] | ![s19211206062025](https://a.okmd.dev/md/6842f251ca157.png) |
 
