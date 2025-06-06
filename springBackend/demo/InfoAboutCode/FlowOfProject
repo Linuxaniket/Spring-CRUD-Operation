@@ -1,0 +1,35 @@
+The flow of the Spring Boot Project:
+
+1. **Client Request**
+   - The client (browser, Postman, etc.) sends an HTTP request to the server.
+
+2. **Controller Layer**
+   - The request is received by a REST Controller.
+   - The controller maps the request to a specific handler method using annotations like @GetMapping, @PostMapping, etc.
+
+3. **Service Layer**
+   - The controller calls the appropriate service class.
+   - The service layer contains business logic and processes the request.
+
+4. **Repository Layer**
+   - The service interacts with the repository (DAO) layer.
+   - The repository uses Spring Data JPA to perform CRUD operations on the database.
+
+5. **Database**
+   - The repository executes queries and interacts with the database (e.g., MySQL, H2).
+
+6. **Response Flow**
+   - The data retrieved or processed is returned from the repository to the service.
+   - The service returns the result to the controller.
+   - The controller sends the response back to the client in JSON or XML format.
+
+7. **Exception Handling**
+   - If any error occurs, it is handled by @ControllerAdvice or exception handler methods.
+
+8. **Logging & Security**
+   - Logging is performed at various layers for monitoring.
+   - Security (if implemented) checks requests using Spring Security.
+
+**Summary:**
+Client → Controller → Service → Repository → Database  
+Database → Repository → Service → Controller → Client

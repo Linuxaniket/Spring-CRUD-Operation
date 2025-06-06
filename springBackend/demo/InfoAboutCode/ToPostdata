@@ -1,0 +1,58 @@
+**How to use @PostMapping in Spring Boot:**
+
+- `@PostMapping` is used in a controller to handle HTTP POST requests.
+- It maps a specific URL to a method that processes the incoming data (usually in JSON format).
+
+**Example:**
+
+```java
+@RestController
+@RequestMapping("/api")
+public class YourController {
+
+    @PostMapping("/your-endpoint")
+    public ResponseEntity<String> createData(@RequestBody YourEntity data) {
+        // Save data to database or process it
+        return ResponseEntity.ok("Data created successfully");
+    }
+}
+```
+
+**How it works with Postman:**
+- When you send a POST request to `/api/your-endpoint` with JSON data, the method annotated with `@PostMapping` receives and processes it.
+
+**Summary:**  
+Use `@PostMapping` in your controller to accept POST requests and handle data sent from clients like Postman.
+
+
+**How to POST data using Postman in a Spring Boot project:**
+
+1. **Start your Spring Boot application.**
+
+2. **Open Postman.**
+
+3. **Set the request type to `POST`.**
+
+4. **Enter the API endpoint URL.**  
+   Example: `http://localhost:8080/api/your-endpoint`
+
+5. **Go to the `Body` tab.**  
+   - Select `raw` and choose `JSON` from the dropdown.
+
+6. **Enter your JSON data.**  
+   Example:
+   ```json
+   {
+     "field1": "value1",
+     "field2": "value2"
+   }
+   ```
+
+7. **Click `Send`.**
+
+8. **Check the response for confirmation of data creation.**
+
+**Summary:**  
+POST → URL → Body (JSON) → Send → Check response
+
+

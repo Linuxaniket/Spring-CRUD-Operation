@@ -1,0 +1,20 @@
+The flow for just creating the database in a Spring Boot project:
+
+1. **Configure Database Properties**
+   - Set up database connection details in `application.properties` or `application.yml` (e.g., URL, username, password, driver).
+
+2. **Add Dependencies**
+   - Add the required database and JPA dependencies in `pom.xml` (for Maven) or `build.gradle` (for Gradle).
+
+3. **Entity Class Creation**
+   - Create Java classes annotated with `@Entity` to define the database tables.
+
+4. **JPA Repository Creation**
+   - Create interfaces extending `JpaRepository` or `CrudRepository` for each entity.
+
+5. **Run the Application**
+   - Start the Spring Boot application.  
+   - Spring Boot auto-creates the database and tables based on the entity classes and configuration.
+
+**Summary:**  
+Configure properties → Add dependencies → Create entity → Create repository → Run application → Database/tables created
